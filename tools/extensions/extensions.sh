@@ -1,6 +1,6 @@
 #!/bin/bash
 # no olvidar dar permisos 
-# chmod +x tools/extensions.sh
+# chmod +x tools/extensions.sh  
 # Lista de extensiones recomendadas para React Native
 extensions=(
   msjsdiag.vscode-react-native
