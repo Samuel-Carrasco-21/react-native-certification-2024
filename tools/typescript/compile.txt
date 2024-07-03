@@ -1,0 +1,5 @@
+-- to compile ts file to js file:
+
+npm install -g typescript
+
+tsc file.ts
