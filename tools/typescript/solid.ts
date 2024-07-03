@@ -53,27 +53,6 @@ formas.forEach(forma => console.log(forma.area()));
 
 
 // Liskov Substitution Principle (LSP)
-class Animal01 {
-  comer(): void {
-    console.log('El animal está comiendo.');
-  }
-}
-
-class Perro01 extends Animal01 {
-  comer(): void {
-    console.log('El perro está comiendo.');
-  }
-}
-
-function alimentarAnimal01(animal: Animal): void {
-  animal.comer();
-}
-
-const miPerro01 = new Perro01();
-alimentarAnimal(miPerro01);  // Output: El perro está comiendo.
-
-
-// 
 class Animal {
   comer(): void {
     console.log('El animal está comiendo.');
