@@ -17,6 +17,11 @@ Object.freeze(ESTUDIANTE);
 ESTUDIANTE.EDAD = 22;  // No tendrá efecto porque el objeto está congelado
 console.table(ESTUDIANTE);  // La edad seguirá siendo 21
 
+const ESTUDIANTE = {
+  NOMBRE: "Hugo",
+  APELLIDO: "Apaza",
+  EDAD: 20,
+};
 // Intentar agregar un nuevo atributo no funcionará con el objeto congelado
 ESTUDIANTE.PROMEDIO = 97.6;  // No tendrá efecto
 console.table(ESTUDIANTE);  // No se agregará el atributo PROMEDIO
@@ -80,12 +85,21 @@ const nuevoObjetoLargo = {
 };
 console.table(nuevoObjetoLargo);
 
+const year = 2023;
+const auto = {
+  placa: "5719HHP",
+  marca: "Ford",
+};
+const conductor = {
+  nombre: "Jose",
+  licencia: "6746987",
+};
 // Forma corta de combinar objetos usando el operador spread
 const nuevoObjeto = {
+  year,
   ...auto,
   ...conductor,
-  licencia: "3421423",  // Sobrescribe la licencia original del conductor
-  year,
+  licencia: "123",  // Sobrescribe la licencia original del conductor
 };
 console.table(nuevoObjeto);
 
@@ -140,3 +154,10 @@ class ClaseDos extends ClaseUno {
 const ObjetoNuevoDos = new ClaseDos("Maria", "Perez", 25);
 ObjetoNuevoDos.getAtributoUno();  // Output: Maria
 ObjetoNuevoDos.getAtributoTres();  // Output: 25
+
+const conductor = {
+  nombre: "hola",
+  licencia: "6746987",
+};
+const {licencia} = conductor;
+console.log(licencia);

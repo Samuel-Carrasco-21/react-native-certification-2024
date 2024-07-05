@@ -19,11 +19,16 @@ console.log(typeof edadGil);  // Output: bigint
 
 // No se puede mezclar tipos BigInt y number directamente en operaciones
 // Esto generará un error: TypeError: Cannot mix BigInt and other types
-// console.log(edadGil + edad);
+console.log(edadGil + edad);
 
 // Undefined
 let course;
 console.log(typeof course);  // Output: undefined
+
+
+const object = undefined;
+
+console.log(null===undefined);
 
 // Null
 // Aunque null es un tipo especial, su tipo es 'object' en JavaScript.

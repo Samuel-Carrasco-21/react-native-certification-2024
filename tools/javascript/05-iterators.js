@@ -77,6 +77,7 @@ const coloresModificados = [...colores];
 coloresModificados.splice(1, 1, "verde", "amarillo");
 console.log(coloresModificados);  // Output: ['rojo', 'verde', 'amarillo', 'blanco']
 
+const colores = ["rojo", "azul", "blanco", " color 4", " color 5"];
 // slice: Retorna una copia de una parte del array en un nuevo array
-const coloresParciales = colores.slice(1, 3);
+const coloresParciales = colores.slice(1, 4);
 console.log(coloresParciales);  // Output: ['azul', 'blanco']

@@ -17,11 +17,20 @@ const nuevoObjeto = {
     licencia: "3421423",
     year: 2023,
 };
+const list = [2, 4, "paul", () => { alert("HUGOOOOO"); }, 3.14159];
+// devolver valores de nuevoObjeto
+console.log(Object.values(nuevoObjeto).map(valorAtributo => valorAtributo));
+// devolver nombres de los atributos de nuevoObjeto
+console.log(Object.keys(nuevoObjeto).map(key => key));
 
-const objeto3 = [...list, ...Object.keys(nuevoObjeto).map(key => nuevoObjeto[key]), 2];
+const objeto3 = [...list, ...(Object.values(nuevoObjeto).map(valorAtributo => valorAtributo)), 2];
 
 // Recorrer la nueva lista e imprimir cada elemento
 objeto3.forEach(i => console.log(i));
+
+// filtrar numeros
+const nuevaListaA = objeto3.filter((item) => typeof item==="number");
+console.log(nuevaListaA);
 
 // Crear una lista vacía y agregar elementos dinámicamente
 const frutas = [];

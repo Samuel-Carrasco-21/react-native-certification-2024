@@ -15,8 +15,8 @@ let apellido = "Encinas";
 console.log(apellido);  // Output: Encinas
 
 if (true) {
-    let apellido = "Carrasco";
-    console.log(apellido);  // Output: Carrasco
+  let apellido = "Carrasco";
+  console.log(apellido);  // Output: Carrasco
 }
 
 console.log(apellido);  // Output: Encinas
