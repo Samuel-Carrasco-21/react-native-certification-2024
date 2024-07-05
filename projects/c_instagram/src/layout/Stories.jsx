@@ -1,27 +1,23 @@
-import { View, Image, StyleSheet  } from "react-native";
-import iconLogo from '../assets/icon.png';
+import { ScrollView, StyleSheet  } from "react-native";
+import StoryComponent from "../components/stories/Story";
 const Stories = () => {
   return (
-    <View style={styles.stories}> 
-        <Image 
-            source={iconLogo} 
-            style={styles.story} 
-        />
-    </View>
+    <ScrollView horizontal style={styles.stories}> 
+        <StoryComponent />
+        <StoryComponent />
+        <StoryComponent />
+        <StoryComponent />
+        <StoryComponent />
+        <StoryComponent />
+        <StoryComponent />
+        <StoryComponent />
+    </ScrollView>
   );
 };
 
 const styles = StyleSheet.create({
-    story: {
-        width: 57,
-        height: 57,
-        borderRadius: 60,
-        borderColor: 'red',
-        borderWidth: 3,
-    },
     stories: {
         flexDirection: 'row',
-        justifyContent: 'space-between',
     }
 });
 export default Stories;
