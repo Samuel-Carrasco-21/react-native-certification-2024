@@ -1,10 +1,8 @@
-import { View, Text } from 'react-native'
 import React from 'react'
+import OrderedCharactersSWList from '../components/OrderedCharactersSWList'
 
 export default function UseMemoScreen() {
   return (
-    <View>
-      <Text>UseMemoScreen</Text>
-    </View>
+    <OrderedCharactersSWList/>
   )
 }

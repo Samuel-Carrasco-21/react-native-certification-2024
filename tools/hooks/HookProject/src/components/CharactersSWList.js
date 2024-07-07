@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Text, View, FlatList, StyleSheet, ActivityIndicator, Alert, Button, ScrollView } from 'react-native';
+import { Text, View, FlatList, StyleSheet, ActivityIndicator, Button } from 'react-native';
 import CharacterSW from './CharacterSW';
 
 export default function CharactersSWList() {

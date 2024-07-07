@@ -4,9 +4,12 @@
 
 Se trata de un Higher Order Component (HOC) en React que permite optimizar el rendimiento de los componentes funcionales. Este hook previene renderizados innecesarios al memorizar el resultado del renderizado de un componente funcional y solo lo vuelve a renderizar si los props que recibió con anterioridad han cambiado.
 
+## Uso de memo
+
 Una forma inicial de utilizar este hook es de la siguiente manera:
 
 ```javascript
+// componente
 const MyComponent = ({ prop1, prop2 }) => {
   // lógica del componente
   return (
@@ -17,6 +20,7 @@ const MyComponent = ({ prop1, prop2 }) => {
   );
 };
 
+// exportación del componente usando memo
 export default memo(MyComponent);
 ```
 
