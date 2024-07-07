@@ -96,4 +96,9 @@ const styles = StyleSheet.create({
     justifyContent: 'space-around',
     marginBottom: 16,
   },
+  loader: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
 });
