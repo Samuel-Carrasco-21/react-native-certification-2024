@@ -1,8 +1,12 @@
-import Calculator from './src/components/Calculator';
+import UseStateUseEffectScreen from './src/screens/UseStateUseEffectScreen';
+import MemoScreen from './src/screens/MemoScreen';
 
 export default function App() {
+  // descomentar un ejemplo para observarlo
   return (
-    <Calculator/>
+    <>
+      {/* <UseStateUseEffectScreen/> */}
+      <MemoScreen/>
+    </>
   );
 }
-

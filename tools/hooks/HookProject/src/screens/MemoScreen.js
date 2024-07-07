@@ -1,10 +1,8 @@
-import { View, Text } from 'react-native'
 import React from 'react'
+import CharactersSWList from '../components/CharactersSWList'
 
 export default function MemoScreen() {
   return (
-    <View>
-      <Text>MemoScreen</Text>
-    </View>
+    <CharactersSWList/>
   )
 }
