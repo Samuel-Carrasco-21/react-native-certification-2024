@@ -1,13 +1,19 @@
-import { SafeAreaView, Text, StyleSheet } from 'react-native';
+import { SafeAreaView, ScrollView, StyleSheet } from 'react-native';
+import { Divider } from 'react-native-elements';
 
 import Header from '../layout/Header';
 import Stories from '../layout/Stories';
+import Post from '../layout/Post';
 
 const HomeScreen = () => {
   return (
     <SafeAreaView style={styles.container}>
         <Header />
-        <Stories />
+        <ScrollView >
+          <Stories />
+          <Divider style={styles.divider}/>
+          <Post></Post>
+        </ScrollView>
     </SafeAreaView>
   );
 };
@@ -20,6 +26,9 @@ const styles = StyleSheet.create({
   },
   text: {
     color: 'white'
+  },
+  divider: {
+    marginVertical: 10
   }
 });
 export default HomeScreen;

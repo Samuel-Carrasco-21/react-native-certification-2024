@@ -1,14 +1,13 @@
 import {View, Image, Text, StyleSheet} from 'react-native';
-import iconLogo from '../../assets/icon.png';
 
-const StoryComponent = () => {
+const StoryComponent = ({story}) => {
     return (
         <View style={{flexDirection: 'column', alignContent: 'center'}}>
         <Image 
-            source={iconLogo} 
+            source={{uri:story.image}}
             style={styles.story} 
         />
-        <Text style={styles.personText}>Paul</Text>
+        <Text style={styles.personText}>{story.name}</Text>
     </View>
     );
 }
