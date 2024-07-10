@@ -2,14 +2,15 @@ import React from "react";
 import { TouchableOpacity, Image, View, StyleSheet } from "react-native";
 import Icon from "react-native-vector-icons/FontAwesome5";
 
-export default function PostActions() {
+export default function PostActions({liked}) {
+  console.log(liked)
   const [likeIcon, setLikeIcon] = React.useState(1);
   const [bookmarkIcon, setBookmarkIcon] = React.useState(1);
   return (
     <View style={Styles.container}>
       <View style={{ flexDirection: "row", justifyContent: "flex-start" , gap: 10}}>
         <TouchableOpacity onPress={() => setLikeIcon(likeIcon + 1)}>
-          <Icon name="heart" size={20} color="white" />
+          <Icon name="heart" size={20} color={`${liked?'red':'white'}`} solid={liked}/>
         </TouchableOpacity>
         <TouchableOpacity onPress={() => console.log("Pressed Comment")}>
           <Icon name="comment" size={20} color="white" />

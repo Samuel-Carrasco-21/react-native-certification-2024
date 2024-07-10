@@ -1,13 +1,23 @@
-import React from 'react';
-import {Text, TouchableOpacity, StyleSheet} from 'react-native';
+import React from "react";
+import { Text, TouchableOpacity, StyleSheet } from "react-native";
 
-export default function PostLikes({post}) {
+import CircleImageComponent from "../commom/circleImage";
+export default function PostLikes({ numberLikes, users }) {
   return (
     <TouchableOpacity
-      onPress={() => console.log('Pressed Post Likes')}
-      style={styles.container}>
-      <Text style={{color: 'white', fontWeight: '600'}}>
-        {2} likes{' '}
+      onPress={() => console.log("Pressed Post Likes")}
+      style={styles.container}
+    >
+      {users.map((user, index) => {
+        return (
+          <CircleImageComponent
+            uriImage={user.imageUrl}
+            personalStyle={styles.profileImage}
+          />
+        );
+      })}
+      <Text style={{ color: "white", fontWeight: "600" }}>
+        {numberLikes} likes{" "}
       </Text>
     </TouchableOpacity>
   );
@@ -15,7 +25,13 @@ export default function PostLikes({post}) {
 
 const styles = StyleSheet.create({
   container: {
-    flexDirection: 'row',
+    flexDirection: "row",
     marginTop: 10,
-  }
+  },
+  profileImage: {
+    width: 20,
+    height: 20,
+    borderRadius: 15,
+    marginRight: 5,
+  },
 });

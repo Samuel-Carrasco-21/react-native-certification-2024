@@ -1,7 +1,7 @@
 import React from "react";
-import { Text, View, StyleSheet, Vibration } from "react-native";
+import { Text, View } from "react-native";
 
-export default function PostText({ post }) {
+export default function PostText({ user, textPost }) {
   return (
     <View
       style={{
@@ -9,8 +9,8 @@ export default function PostText({ post }) {
       }}
     >
       <Text style={{ color: "white" }}>
-        <Text style={{ fontWeight: '600', marginRight: 5 }}>@drpaulvazo </Text>
-        <Text style={{ color: "white" }}>Soooooo cute </Text>
+        <Text style={{ fontWeight: '600', marginRight: 5 }}>@{user.username} </Text>
+        <Text style={{ color: "white"}}>{textPost}</Text>
       </Text>
     </View>
   );

@@ -1,4 +1,4 @@
-const posts = [
+export const posts = [
     {
         id: 1,
         user: {
@@ -6,10 +6,23 @@ const posts = [
             username: 'marian',
             imageUrl: 'https://randomuser.me/api/portraits/med/women/1.jpg'
         },
-        likes: 10,
+        likes: 2,
+        likesUsers: [
+            {
+                id: 2,
+                username: 'mateo',
+                imageUrl: 'https://randomuser.me/api/portraits/med/men/50.jpg'
+            },
+            {
+                id: 3,
+                username: 'adrian',
+                imageUrl: 'https://randomuser.me/api/portraits/med/men/100.jpg'
+            }
+        ],
         text: 'Soooooo cute',
         comments: 5,
         imageUrl: 'https://cdn.britannica.com/34/235834-050-C5843610/two-different-breeds-of-cats-side-by-side-outdoors-in-the-garden.jpg',
+        liked: true,
         commentsData: [
             {
                 id: 1,

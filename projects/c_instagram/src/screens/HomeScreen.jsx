@@ -5,14 +5,29 @@ import Header from '../layout/Header';
 import Stories from '../layout/Stories';
 import Post from '../layout/Post';
 
+import { posts } from '../data/posts';
+import { useEffect, useState } from 'react';
+
 const HomeScreen = () => {
+  const [postsData, setPostsData] = useState([]);
+
+  useEffect(() => {
+    setPostsData(posts);
+  }, []);
+
   return (
     <SafeAreaView style={styles.container}>
         <Header />
         <ScrollView >
           <Stories />
           <Divider style={styles.divider}/>
-          <Post></Post>
+          {
+            postsData.map((post, index) => {
+              return (
+                <Post key={index} post={post}></Post>
+              )
+            })
+          }
         </ScrollView>
     </SafeAreaView>
   );

@@ -8,14 +8,15 @@ import PostText from "../components/posts/PostText";
 import PostComments from "../components/posts/PostComments";
 import PostPublishDate from "../components/posts/PostDateComponent";
 
-const Post = () => {
+const Post = ({post}) => {
+  const { user, imageUrl, liked, likes, likesUsers, text} = post;
   return (
     <View>
-      <HeaderPostComponent />
-      <PostImage />
-      <PostActions />
-      <PostLikes />
-      <PostText />
+      <HeaderPostComponent user={user}/>
+      <PostImage imageUrl= {imageUrl} />
+      <PostActions liked={liked}/>
+      <PostLikes numberLikes={likes} users={likesUsers}/>
+      <PostText user={user} textPost={text}/>
       <PostComments />
       <PostPublishDate />
     </View>

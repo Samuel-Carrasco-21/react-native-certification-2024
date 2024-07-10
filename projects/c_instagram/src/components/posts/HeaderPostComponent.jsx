@@ -3,9 +3,8 @@ import Icon from "react-native-vector-icons/FontAwesome5";
 
 import CircleImageComponent from "../../components/commom/circleImage";
 
-const imageProfile = "https://randomuser.me/api/portraits/med/men/3.jpg";
-
-const HeaderPostComponent = () => {
+const HeaderPostComponent = ({ user }) => {
+  const { username, imageUrl } = user;
   return (
     <View style={styles.header}>
       <View
@@ -16,10 +15,10 @@ const HeaderPostComponent = () => {
         }}
       >
         <CircleImageComponent
-          uriImage={imageProfile}
+          uriImage={imageUrl}
           personalStyle={styles.profileImage}
         />
-        <Text style={styles.text}>Username</Text>
+        <Text style={styles.text}>{username}</Text>
       </View>
       <Icon name="ellipsis-h" size={20} color="white" />
     </View>
