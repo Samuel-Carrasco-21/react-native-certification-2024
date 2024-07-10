@@ -11,6 +11,7 @@ export default function PostLikes({ numberLikes, users }) {
       {users.map((user, index) => {
         return (
           <CircleImageComponent
+            key={index}
             uriImage={user.imageUrl}
             personalStyle={styles.profileImage}
           />

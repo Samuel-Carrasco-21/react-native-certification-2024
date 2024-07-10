@@ -5,10 +5,9 @@ const SearchScreen = () => {
     return <SafeAreaView style={{
         width: '100%',
         height: '100%',
-        backgroundColor: 'black',
-        position: 'relative',
+        backgroundColor: 'black'
     }}>
-        <ScrollView onPressIn={() => setPressed(true)}>
+        <ScrollView>
             <SearchBox/>
             <SearchContent/>
         </ScrollView>
