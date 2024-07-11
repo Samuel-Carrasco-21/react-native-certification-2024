@@ -1,8 +1,12 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import { Text, View, FlatList, StyleSheet, ActivityIndicator, Button } from 'react-native';
 import CharacterCardUC from './CharacterCardUC';
+import { TextInput } from 'react-native-paper';
+import useLocalStorage from '../../hooks/useLocalStorage';
 
 export default function CharacterCardListUC() {
+  const [name, setName] = useLocalStorage('name', '');
+
   const [data, setData] = useState([]);
   const [originalData, setOriginalData] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -81,6 +85,17 @@ export default function CharacterCardListUC() {
       </Text>
       <Button title={`Mostrar personajes pequeños: ${ showSmallCharacters ? 'SI' : 'NO' }`} onPress={changingShowSmallState} color="green" />
       <Button title={`Contador general ${buttonCounter}`} onPress={incrementCounter} />
+      <View>
+        <Text>Enter your name:</Text>
+        <TextInput
+          value={name}
+          onChangeText={setName}
+          placeholder="Name"
+          style={{ borderWidth: 1, padding: 10, marginVertical: 10 }}
+        />
+        <Button title="Save" onPress={() => setName(name)} />
+        <Text>Your name is: {name}</Text>
+      </View>
     </View>
   )
 }

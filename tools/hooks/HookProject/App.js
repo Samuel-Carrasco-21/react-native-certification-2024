@@ -11,8 +11,8 @@ export default function App() {
       {/* <UseStateUseEffectScreen/> */}
       {/* <MemoScreen/> */}
       {/* <UseMemoScreen/> */}
-      {/* <UseCallbackScreen/> */}
-      <UseRefScreen/>
+      <UseCallbackScreen/>
+      {/* <UseRefScreen/> */}
     </>
   );
 }
