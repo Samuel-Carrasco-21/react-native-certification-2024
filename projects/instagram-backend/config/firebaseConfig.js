@@ -1,5 +1,5 @@
 const { initializeApp } = require('firebase-admin/app');
-const { credential, firestore } = require('firebase-admin');
+const { credential, firestore, auth } = require('firebase-admin');
 const firebaseSetup = require('./firebase_setup.json');
 
 initializeApp({
@@ -8,5 +8,7 @@ initializeApp({
 });
 
 const db = firestore();
+const authInstance = auth();
 
 module.exports = db;
+module.exports = authInstance;
