@@ -7,7 +7,7 @@ export const loginLogoutInitialValues = {
   auth: false,
 };
 
-export const loginLogoutTypesArray = Object.values(loginLogoutTypes).map(type => type);
+export const loginLogoutTypesArray = Object.values(loginLogoutTypes).map(type => type); // ["login user", "logout user"]
 
 export const loginLogoutReducer = (state, action) => {
   // en este caso no será necesario pasar un valor por medio de action

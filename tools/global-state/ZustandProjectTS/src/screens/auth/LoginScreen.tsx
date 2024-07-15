@@ -31,9 +31,9 @@ export default function LoginScreen ({ navigation }: Props) {
     }
   };
 
-  useEffect(() => {
-    clearAll();
-  }, []);
+  // useEffect(() => {
+  //   clearAll();
+  // }, []);
 
   return (
     <SafeAreaView style={styles.container}>

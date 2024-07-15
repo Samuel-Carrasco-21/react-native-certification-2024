@@ -7,7 +7,7 @@ const HomeScreen = () => {
 
   return (
     <View>
-      <Text>Usuario reciente: {email}</Text>
+      <Text>Usuario reciente obtenido: {email}</Text>
     </View>
   )
 }

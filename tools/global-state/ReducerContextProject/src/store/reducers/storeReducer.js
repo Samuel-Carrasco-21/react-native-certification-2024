@@ -11,7 +11,7 @@ export const initialValues = {
 const arrayReducers = [
   {
     reducerFunction: loginLogoutReducer,
-    types: [...loginLogoutTypesArray],
+    types: [...loginLogoutTypesArray] // ["login user", "logout user"],
   }
 ];
 

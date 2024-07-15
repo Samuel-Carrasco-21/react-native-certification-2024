@@ -5,8 +5,8 @@ import AppNavigator from './app/AppNavigator';
 import { useSelector } from 'react-redux';
 
 const Navigator = () => {
-  const authUser = useSelector(store => store.userAuth);
-  const { auth } = authUser;
+  const authReducer = useSelector(store => store.authReducer);
+  const { auth } = authReducer;
   return (
     <NavigationContainer>
       {
