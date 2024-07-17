@@ -1,15 +1,20 @@
-import HomeScreen from "./src/screens/HomeScreen";
+import { useState } from "react";
 import { NavigationContainer } from "@react-navigation/native";
-import { createNativeStackNavigator } from "@react-navigation/native-stack";
-import { Footer } from "./src/layout/Footer";
-const Stack = createNativeStackNavigator();
+
+import AppNavigation from "./src/navigation/AppNavigation";
+import AuthNavigation from "./src/navigation/AuthNavigation";
 
 export default function App() {
+  const [login, setLogin] = useState(false);
   return (
     <NavigationContainer>
-      <Stack.Navigator screenOptions={{headerShown:false}}>
-        <Stack.Screen name="tab" component={Footer} />
-      </Stack.Navigator>
+      {
+        login ? (
+          <AppNavigation/>
+        ) : (
+          <AuthNavigation/>
+        )
+      }
     </NavigationContainer>
   );
 }
