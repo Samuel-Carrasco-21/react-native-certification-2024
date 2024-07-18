@@ -1,4 +1,4 @@
-const authInstance = require('../config/firebaseConfig');
+const { authInstance } = require('../config/firebaseConfig');
 
 const loginUser = async (user) => {
     const { email, password } = user;

@@ -10,5 +10,4 @@ initializeApp({
 const db = firestore();
 const authInstance = auth();
 
-module.exports = db;
-module.exports = authInstance;
+module.exports = { db, authInstance};
