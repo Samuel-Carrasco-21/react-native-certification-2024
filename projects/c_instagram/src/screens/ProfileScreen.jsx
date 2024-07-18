@@ -9,8 +9,7 @@ const ProfileScreen = ({ navigation }) => {
   const user = {
     name: "Paul3",
     email: "paul3@gmail.com",
-    bio: "Desarrollador apasionado de React Native y Firebase.",
-    avatar: "https://www.example.com/avatar.jpg", // Reemplaza con la URL de tu avatar
+    avatar: "https://www.example.com/avatar.jpg",
     posts: 50,
     followers: 1200,
     following: 180,
@@ -20,7 +19,7 @@ const ProfileScreen = ({ navigation }) => {
     signOut(auth)
       .then(() => {
         console.log("Sesión cerrada");
-        navigation.replace('login'); // Navega a la pantalla de autenticación
+        navigation.replace('login'); 
       })
       .catch((error) => {
         console.error("Error al cerrar sesión: ", error);
