@@ -1,4 +1,10 @@
-import { View, Text, FlatList, StyleSheet } from "react-native";
+import {
+  View,
+  Text,
+  FlatList,
+  StyleSheet,
+  TouchableOpacity,
+} from "react-native";
 import { Avatar, Chip } from "react-native-elements";
 
 import { Card } from "react-native-elements/dist/card/Card";
@@ -26,32 +32,38 @@ const STUDENTS = [
     title: "Alexia",
   },
 ];
-const ReelScreen = () => {
+const ReelScreen = ({navigation}) => {
   const StudentViewItem = ({ item }) => {
+    console.log(navigation);
     console.log("=======>", item);
     const { title } = item;
+    const goToStudent = () => {
+      navigation.navigate("studentProfile", { name: title });
+    }
     return (
       <Card>
-        <View style={styles.container}>
-          <View style={styles.avatarContainer}>
-            <Avatar
-              size={64}
-              rounded
-              source={{
-                uri: "https://cdn.pixabay.com/photo/2016/11/21/12/42/beard-1845166_1280.jpg",
-              }}
-            />
-          </View>
-          <View style={styles.textContainer}>
-            <View>
-              <Text style={styles.nameText}>{title}</Text>
-              <Chip
-                title="Follow"
-                containerStyle={{ marginVertical: 15, width: 80}}
+        <TouchableOpacity onPress={goToStudent}>
+          <View style={styles.container}>
+            <View style={styles.avatarContainer}>
+              <Avatar
+                size={64}
+                rounded
+                source={{
+                  uri: "https://cdn.pixabay.com/photo/2016/11/21/12/42/beard-1845166_1280.jpg",
+                }}
               />
             </View>
+            <View style={styles.textContainer}>
+              <View>
+                <Text style={styles.nameText}>{title}</Text>
+                <Chip
+                  title="Follow"
+                  containerStyle={{ marginVertical: 15, width: 80 }}
+                />
+              </View>
+            </View>
           </View>
-        </View>
+        </TouchableOpacity>
       </Card>
     );
   };
@@ -59,6 +71,7 @@ const ReelScreen = () => {
     <SafeAreaView>
       <FlatList
         data={STUDENTS}
+        onPress={() => setSelectedId(item.id)}
         renderItem={StudentViewItem}
         keyExtractor={(item) => item.id}
       />
@@ -86,7 +99,7 @@ const styles = StyleSheet.create({
   nameText: {
     fontSize: 20,
     fontWeight: "bold",
-    marginTop: 10
-  }
+    marginTop: 10,
+  },
 });
 export default ReelScreen;

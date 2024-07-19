@@ -16,7 +16,7 @@ export default function App() {
       if (user) {
         setLogin(true);
       } else {
-        setLogin(false);
+        setLogin(true);
       }
     });
     return unsubscribe;
